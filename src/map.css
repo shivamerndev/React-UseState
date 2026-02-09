@@ -1,0 +1,33 @@
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-inline: 1rem;
+  gap: 2rem;
+  font-size: 1rem;
+  padding: 2rem;
+}
+#card {
+  border: 3px dashed rebeccapurple;
+  padding: 1rem;
+  border-radius: 1rem;
+  user-select: none;
+  width: 30%;
+  background: black;
+}
+h1 {
+  white-space: nowrap;
+  font-size: 1.8rem;
+}
+button {
+  background: red;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+.notfound {
+  height: 100%;
+  text-align: center;
+  align-content: center;
+}
