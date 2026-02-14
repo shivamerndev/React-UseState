@@ -26,8 +26,8 @@ const TodoProject = () => {
     <div id={toggle ? "light-theme" : 'dark-theme'} className=' min-h-screen pt-4 text-white '>
       <div className='w-10/11 mx-auto'>
         <Header tasks={tasks} setTasks={setTasks} setToggle={setToggle} toggle={toggle} render={render} />
-        <div className='flex gap-8 justify-between w-full'>
-          <div className='flex-1'>
+        <div className='md:flex gap-8 justify-between w-full'>
+          <div className='flex-1 h-full'>
             <CardStats toggle={toggle} timer={timer} time={formatTime} tasks={tasks} />
             <AddTask toggle={toggle} tasks={tasks} setTasks={setTasks} />
           </div>
