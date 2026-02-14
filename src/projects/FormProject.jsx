@@ -2,7 +2,7 @@ import { useState } from "react"
 
 const FormProject = () => {
 
-    const [user, setUser] = useState({ pictitle: "", img: "", name: "", email: "", age: "", gender: "", skills: [], bio: "", exp: "", project: "" })
+    const [user, setUser] = useState(JSON.parse(localStorage.getItem("form")) || { pictitle: "", img: "", name: "", email: "", age: "", gender: "", skills: [], bio: "", exp: "", project: "" })
 
     const handleChange = (e) => {
         const { value, files, type, name, checked } = e.target;
@@ -32,6 +32,10 @@ const FormProject = () => {
             <div className='md:flex-1  px-4 content-center'>
                 <form onSubmit={(e) => {
                     e.preventDefault()
+                    if (!user.img) {
+                        return alert("Image is Required")
+                    }
+                    localStorage.setItem("form", JSON.stringify(user))
                     alert("Form Submitted Successfully")
                 }} className='text-white md:w-2/3  mx-auto justify-center max-h-full rounded-2xl border p-8 border-gray-500/50  flex flex-col items-cente gap-4 ' >
                     <input required onChange={handleChange} name="name" className='border rounded-md px-4 py-1' type="text" placeholder='Enter your name' />
@@ -58,8 +62,8 @@ const FormProject = () => {
                     <label htmlFor="files" className='border-dashed truncate border text-sm bg-blue-400/10 text-blue-200 cursor-pointer border-blue-400 rounded-md py-2.5 px-4'>
                         <span className="bg-zinc-700 text-white rounded px-2 mr-2 py-1">Choose Your File</span> {user.pictitle} </label>
 
-                    <textarea onChange={handleChange} maxLength={150} name="bio" className='h-1/5 border rounded-md outline-none py-2 px-4' placeholder='Short bio (max 150 chars)'></textarea>
-                    <button className="">Submit</button>
+                    <textarea required onChange={handleChange} maxLength={150} name="bio" className='h-1/5 border rounded-md outline-none py-2 px-4' placeholder='Short bio (max 150 chars)'></textarea>
+                    <button className="" >Submit</button>
                 </form>
             </div>
             <div className=' flex-1 flex items-center px-4'>

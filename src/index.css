@@ -1,5 +1,5 @@
 @import "tailwindcss";
- /* :root {
+/* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -18,11 +18,28 @@ body,
   width: 100%;
 } */
 
-h1{
+/* h1{
   line-height: 1;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 h1>span{
   font-size: 1rem;
   color: cyan;
+} */
+
+#dark-theme {
+  background-color: #101828;
+}
+#light-theme {
+  background-color: #ffffff;
+}
+#bg-theme {
+  background-color: #36415391;
+}
+#bg-theme-light {
+  background-color: #cdcdcd6a;
+  color: rgb(25, 25, 25);
+}
+#scrollbar{
+  scrollbar-width: none;
 }

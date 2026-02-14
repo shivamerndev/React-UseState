@@ -41,11 +41,11 @@ const HandleForm = () => {
                 }} className='border mx-4 px-4 rounded-2xl text-sm' >Reset</button>
             </div>
         </form>
-        <Form  setForm={setUsers}/>
+        <ReactHookForm  setForm={setUsers}/>
     </div>
 }
 
-function Form({setForm}) {
+function ReactHookForm({setForm}) {
     let { register, handleSubmit, reset } = useForm();
 
     let formData = data => {
