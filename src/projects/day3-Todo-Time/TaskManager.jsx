@@ -19,7 +19,7 @@ const TaskManager = ({ setTasks, tasks, time, setTimer, timer, toggle }) => {
         </div>
         <div id='scrollbar' className='overflow-y-auto  h-full flex flex-col gap-4 '>
 
-            {tasks.length ? tasks.map((t, i) => <TaskCard key={i} datas={{ task: t, idx: i, toggle, time, timer }} />) : <h1 className='h-full text-center content-center text-xl '>No tasks yet. Add one above!</h1>}
+            {tasks.length ? tasks.map((t, i) => <TaskCard key={i} datas={{ task: t, idx: i, toggle, time, timer, setTimer,setTasks,tasks }} />) : <h1 className='h-full text-center content-center text-xl '>No tasks yet. Add one above!</h1>}
 
         </div>
 

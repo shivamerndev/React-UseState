@@ -1,7 +1,9 @@
 const TaskCard = ({ datas }) => {
-    
-    const { task, idx, toggle, time, timer } = datas
+
+    const { task, idx, toggle, time, timer, setTimer, tasks, setTasks } = datas
     const { title, description, priority } = task;
+
+    console.log(time(61), task.time)
 
     return <div id={toggle ? "bg-theme-light" : 'bg-theme'} className={` w-full p-4 rounded-2xl  border-l-4 ${priority === "high" ? "border-green-400" : priority === "low" ? "border-red-400" : "border-yellow-400"} flex  gap-4 items-start `}>
 
@@ -13,11 +15,17 @@ const TaskCard = ({ datas }) => {
             <span className={`${priority === "high" ? "bg-green-500" : priority === "low" ? "bg-red-500" : "bg-yellow-500/60"} text-yellow-100 w-fit px-3 py-0.5 font-semibold rounded-full content-center uppercase`}>{priority}</span>
             <span className='mx-2 bg-zinc-700 text-white w-fit px-3 py-0.5 font-semibold rounded-full content-center uppercase'>{time(timer)}</span>
             <br /><br />
-            <button onClick={() => {
-                setInterval(() => {
+            <button onClick={(e) => {
+                let id = setInterval(() => {
                     setTimer(prev => prev + 1);
                 }, 1000);
-            }} className=' cursor-pointer mx-2 border-2 border-gray-400 bg-gray-500/70 text-white w-fit px-3 py-0.5 font-semibold rounded-md  '>{" ▶ Start"}</button>
+                console.log(e.target.textContent.toLowerCase())
+                if (e.target.textContent.toLowerCase() === 'pause') {
+                    clearInterval(id)
+                    return
+                }
+
+            }} className=' cursor-pointer mx-2 border-2 border-gray-400 bg-gray-500/70 text-white w-fit px-3 py-0.5 font-semibold rounded-md  '>{timer ? "Pause" : " ▶ Start"}</button>
             <button onClick={() => {
                 let newArr = tasks.filter((t, i) => i !== idx)
                 setTasks(newArr)

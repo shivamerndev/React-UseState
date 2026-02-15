@@ -6,7 +6,7 @@ const CardStats = ({ time, timer, toggle }) => {
 
     return <div className='grid grid-cols-3 gap-4 my-8'>
 
-        {data.map(o => <div key={o.title} id={toggle? "bg-theme-light":'bg-theme'} className=" rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-all">
+        {data.map(o => <div key={o.title} id={toggle? "bg-theme-light":'bg-theme'} className=" rounded-md md:rounded-2xl shadow-lg px-6 py-4 md:p-6 text-center hover:shadow-xl transition-all">
             <p className="text-3xl font-bold">{o.value}</p>
             <h3 className=" text-sm font-medium mt-4">{o.title}</h3>
         </div>

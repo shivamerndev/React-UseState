@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const AddTask = ({ setTasks, tasks, toggle }) => {
 
-    const [task, setTask] = useState({ title: "", description: "", priority: "medium",status:"active" })
+    const [task, setTask] = useState({ title: "", description: "",time:"00:00", priority: "medium",status:"active" })
 
     const handleChange = (e) => {
         const { name, value } = e.target;
