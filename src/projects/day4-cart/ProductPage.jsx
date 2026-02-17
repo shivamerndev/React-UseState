@@ -6,7 +6,7 @@ import { ProductContext } from "./D4Context"
 
 const ProductPage = () => {
 
-    const { getProducts, setProducts, products, lsp,categories } = useContext(ProductContext)
+    const { getProducts, setProducts, products, lsp, categories } = useContext(ProductContext)
     const [search, setSearch] = useState("")
 
     useEffect(() => {
@@ -38,7 +38,7 @@ const ProductPage = () => {
             <h1 className="h-screen block md:hidden bg-black font-semibold text-white text-center content-center">Switch to Desktop For Best Experience. </h1>
             <div className="  hidden md:block text-gray-950 bg-gray-100 relative w-full h-screen overflow-hidden">
 
-                <Nav setSearch={setSearch}  />
+                <Nav setSearch={setSearch} />
 
                 <main className="flex w-full relative h-[88vh] justify-between">
                     <aside className="bg-gray-300/40  shadow-2xl flex-1 space-y-4 py-4 px-4 text-center ">
