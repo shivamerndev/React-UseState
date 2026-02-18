@@ -43,3 +43,51 @@ h1>span{
 #scrollbar{
   scrollbar-width: none;
 }
+
+.card {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  user-select: none;
+  perspective: 300px;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+/* flip on click (JS se class add hogi) */
+/* .card.flipped .card-inner {
+  transform: rotateY(180deg);
+} */
+
+.card-front,.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+}
+
+.card-front {
+  background-image: url(https://tse2.mm.bing.net/th/id/OIP.ngwBSkmRAE6UwL_W1ZiwNQHaHa?pid=Api&P=0&h=180);
+  background-size: cover;
+  background-position: center;
+}
+
+.card-back {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+  transform: rotateY(180deg);
+}
+.card-inner:hover{
+  box-shadow:  3px 3px 20px rgba(136, 8, 255, 0.468);
+}

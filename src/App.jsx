@@ -16,6 +16,8 @@ import ProductPage from './projects/day4-cart/ProductPage'
 import Login from './projects/day5-chat/Login'
 import Chat from './projects/day5-chat/Chat'
 import UserContext from './projects/day5-chat/context/UserContext'
+import Game from './projects/day6-memory/Game'
+import CardContext from './projects/day6-memory/CardContext'
 
 const App = () => {
   return <>
@@ -44,6 +46,16 @@ const App = () => {
         <Route path='/d5/chat' element={<Chat />} />
       </Routes>
     </UserContext>
+
+
+
+    <CardContext>
+      <Routes>
+        <Route path='/p6' element={<Game />} />
+      </Routes>
+    </CardContext>
+
+
   </>
 
 }

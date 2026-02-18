@@ -14,7 +14,7 @@ const ProductPage = () => {
             console.log("Don't Fetch..")
             return
         } else {
-            alert("Fetching Data...")
+            console.log("Fetching Data...")
             getProducts().then(res => {
                 if (res) {
                     localStorage.setItem("products", JSON.stringify(res))
