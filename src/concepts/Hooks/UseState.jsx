@@ -24,7 +24,7 @@ const UseState = () => {
         <h1>count +1 = {count}</h1>
         <h1>count +2 = {count}</h1>
         <h1>count +3 = {count}</h1>
-        <p>If want to update count as given <br /> requirement then we can use <br /> prev=>prev+1,2,3 </p>
+        <p>If want to update count as given <br /> requirement then we can use <br /> prev{"=>"}prev+1,2,3 </p>
         <button onClick={() => {
           setCount(count + 1)
           setCount(count + 2)

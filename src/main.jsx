@@ -1,11 +1,5 @@
 import { createRoot } from 'react-dom/client'
-import  { routes } from './App.jsx'
-import { BrowserRouter, RouterProvider } from 'react-router-dom'
 import './index.css'
+import App from "./App"
 
-createRoot(document.getElementById('root')).render(
-  <RouterProvider router={routes} />
-  // <BrowserRouter>
-  //   <App />
-  // </BrowserRouter>
-)
+createRoot(document.getElementById('root')).render(<App />)
